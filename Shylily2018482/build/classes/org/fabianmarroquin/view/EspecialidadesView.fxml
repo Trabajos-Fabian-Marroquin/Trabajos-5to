@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fabianmarroquin.controller.EspecialidadController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc745" height="514.0" layoutX="-6.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="786.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dcdedf" height="403.0" layoutX="191.0" layoutY="153.0" rotate="139.2" stroke="#dcdedf" strokeType="INSIDE" width="935.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#747474" height="514.0" layoutY="-7.0" stroke="#747474" strokeType="INSIDE" width="184.0" />
+      <VBox layoutY="160.0" prefHeight="241.0" prefWidth="170.0">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Nuevo" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Eliminar" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Editar   " textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reportees" prefHeight="52.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Reporte" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/listar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="-36.0" layoutY="14.0" prefHeight="131.0" prefWidth="197.0" style="-fx-background-color: #dcdedf; -fx-background-radius: 40;">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="84.0" layoutX="72.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/especialidad.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="90.0" prefHeight="28.0" prefWidth="121.0" text=" Especialidades" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tblEspecialidades" layoutX="216.0" layoutY="137.0" onMouseClicked="#seleccionarElemento" prefHeight="341.0" prefWidth="495.0" stylesheets="@../resource/ShylilyCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoEspecialidad" prefWidth="248.0" text="Código Especialidad" />
+          <TableColumn fx:id="colDescripcion" prefWidth="246.0" text="Descripción" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="73.0" fitWidth="70.0" layoutX="50.0" layoutY="428.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/volver.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="196.0" layoutY="14.0" prefHeight="90.0" prefWidth="556.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Especialidad" textFill="#dcdedf">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label text="Descripción" textFill="#dcdedf" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoEspecialidad" prefHeight="39.0" prefWidth="278.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtDescripcion" prefHeight="39.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
