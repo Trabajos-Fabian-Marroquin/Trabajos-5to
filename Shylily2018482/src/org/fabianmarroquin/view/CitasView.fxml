@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fabianmarroquin.controller.CitaController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc745" height="514.0" layoutX="-6.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="1088.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dcdedf" height="956.0" layoutX="625.0" layoutY="-152.0" rotate="33.7" stroke="#dcdedf" strokeType="INSIDE" width="590.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#747474" height="514.0" layoutY="-7.0" stroke="#747474" strokeType="INSIDE" width="170.0" />
+      <VBox layoutY="160.0" prefHeight="241.0" prefWidth="170.0">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Nuevo" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Eliminar" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="63.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Editar   " textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="52.0" prefWidth="170.0" styleClass="button1" stylesheets="@../resource/ShylilyCSS.css" text="Reporte" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/listar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="-36.0" layoutY="14.0" prefHeight="131.0" prefWidth="197.0" style="-fx-background-color: #dcdedf; -fx-background-radius: 40;">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="87.0" layoutX="72.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Cita.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="90.0" prefHeight="28.0" prefWidth="121.0" text="       Citas" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane fx:id="grpFecha" layoutX="182.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="104.0" prefWidth="873.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="136.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="169.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="142.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="155.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Cita" textFill="#747474">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="138.0" text=" Codigo Paciente" textFill="#747474" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="137.0" text=" Num Colegiado" textFill="#747474" GridPane.columnIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Fecha Cita" textFill="#747474" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="150.0" text=" Tratamiento" textFill="#747474" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="118.0" text="Hora de la cita" textFill="#747474" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="159.0" text=" Descripción Actual" textFill="#747474" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoCita" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtTratamiento" editable="false" prefHeight="25.0" prefWidth="178.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDescripcionActual" editable="false" prefHeight="25.0" prefWidth="178.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoPaciente" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="3" />
+            <ComboBox fx:id="cmbNumeroColegiado" prefWidth="150.0" GridPane.columnIndex="5" />
+            <JFXTimePicker fx:id="jfxHora" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCitas" layoutX="182.0" layoutY="145.0" onMouseClicked="#seleccionarElemento" prefHeight="341.0" prefWidth="873.0" stylesheets="@../resource/ShylilyCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCita" prefWidth="88.0" text="Cod. Cita" />
+          <TableColumn fx:id="colFechaCita" prefWidth="141.0" text="Fecha Cita" />
+            <TableColumn fx:id="colHoraCita" prefWidth="147.0" text="Hora Cita" />
+            <TableColumn fx:id="colTratamiento" minWidth="0.0" prefWidth="163.0" text="Tratamiento" />
+            <TableColumn fx:id="colDescripcion" minWidth="6.0" prefWidth="128.0" text="Descripcion " />
+            <TableColumn fx:id="colCodigoPaciente" minWidth="5.0" prefWidth="83.0" text="Cod Paciente" />
+            <TableColumn fx:id="colNumeroColegiado" minWidth="0.0" prefWidth="122.0" text="Num Colegiado" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="73.0" fitWidth="70.0" layoutX="50.0" layoutY="428.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

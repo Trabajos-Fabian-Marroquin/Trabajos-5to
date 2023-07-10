@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fabianmarroquin.controller.LoginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc745" height="514.0" layoutX="-6.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="974.0" />
+      <Ellipse fill="#dcdedf" layoutX="520.0" layoutY="384.0" radiusX="455.0" radiusY="289.0" rotate="149.6" stroke="#dcdedf" strokeType="INSIDE" />
+      <Pane prefHeight="514.0" prefWidth="711.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="228.0" layoutX="254.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="246.0" layoutY="238.0" prefHeight="45.0" prefWidth="113.0" text="Usuario" textFill="#747474">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="246.0" layoutY="322.0" prefHeight="45.0" prefWidth="138.0" text="Contraseña" textFill="#747474">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="246.0" layoutY="283.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 10;" />
+            <PasswordField fx:id="txtContrasena" layoutX="246.0" layoutY="367.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 10;" />
+            <Button fx:id="btnLogin" layoutX="300.0" layoutY="420.0" mnemonicParsing="false" onAction="#login" prefHeight="51.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="Login" textFill="#747474">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="537.0" layoutY="420.0" onMouseClicked="#ventanaUsuario" prefHeight="94.0" prefWidth="173.0" text="Registrarse">
+               <font>
+                  <Font size="21.0" />
+               </font></Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
