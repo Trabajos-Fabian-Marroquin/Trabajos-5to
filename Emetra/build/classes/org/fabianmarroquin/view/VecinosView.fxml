@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fabianmarroquin.controller.VecinosController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80c6e5" height="609.0" stroke="#80c6e5" strokeType="INSIDE" width="1003.0" />
+      <Ellipse fill="#d33440" layoutX="93.0" layoutY="291.0" radiusX="437.0" radiusY="340.0" stroke="#d33440" strokeType="INSIDE" />
+      <VBox layoutX="9.0" layoutY="228.0" prefHeight="246.0" prefWidth="164.0">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="60.0" prefWidth="167.0" text="Nuevo" />
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="60.0" prefWidth="167.0" text="Eliminar" />
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="60.0" prefWidth="164.0" text="Editar" />
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="60.0" prefWidth="167.0" text="Reporte" />
+         </children>
+      </VBox>
+      <Button layoutX="54.0" layoutY="502.0" mnemonicParsing="false" onMouseClicked="#menuPrincipal" prefHeight="47.0" prefWidth="79.0" text="volver" />
+      <ImageView fitHeight="132.0" fitWidth="125.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logo-pmt.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="48.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vecinos" wrappingWidth="90.091796875">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="180.0" layoutY="14.0" prefHeight="132.0" prefWidth="809.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="48.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="186.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="96.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="7.0" prefWidth="171.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DPI" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Nombres" GridPane.columnIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Apellidos" wrappingWidth="91.630859375" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Dirección" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Municipalidad" GridPane.columnIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Código Postal" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNIT" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtDPI" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNombres" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtApellidos" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDireccion" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="txtMunicipalidad" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="5" />
+            <TextField fx:id="txtCodigoPostal" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Teléfono" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtTelefono" prefHeight="39.0" prefWidth="156.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblVecinos" layoutX="180.0" layoutY="181.0" onMouseClicked="#seleccionarElemento" prefHeight="368.0" prefWidth="809.0">
+        <columns>
+          <TableColumn fx:id="colNIT" prefWidth="121.0" text="NIT" />
+          <TableColumn fx:id="colDPI" prefWidth="90.0" text="DPI" />
+            <TableColumn fx:id="colNombres" prefWidth="109.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="106.0" text="Apellidos" />
+            <TableColumn fx:id="colDireccion" minWidth="6.0" prefWidth="82.0" text="Dirección" />
+            <TableColumn fx:id="colMunicipalidad" prefWidth="109.0" text="Municipalidad" />
+            <TableColumn fx:id="colCodigoPostal" prefWidth="91.0" text="Código Postal" />
+            <TableColumn fx:id="colTelefono" prefWidth="100.0" text="Teléfono" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
