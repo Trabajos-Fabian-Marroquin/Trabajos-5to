@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroarmas.controller.AdministracionController">
+   <children>
+      <AnchorPane layoutX="593.0" layoutY="-57.0" prefHeight="483.0" prefWidth="457.0" rotate="-141.3" style="-fx-background-radius: 30 30 30 30; -fx-background-color: EFE1AA;" />
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: CFBF7D;">
+         <children>
+            <Pane layoutX="27.0" prefHeight="161.0" prefWidth="148.0" style="-fx-background-color: F2ECD6; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label prefHeight="43.0" prefWidth="148.0" text="Administración" textFill="#3f382a">
+                     <font>
+                        <Font name="Russo One" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="115.0" fitWidth="133.0" layoutX="8.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/imagen2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutY="164.0" prefHeight="202.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo" textFill="#3f382a">
+                     <font>
+                        <Font name="Russo One" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Eliminar" textFill="#3f382a">
+                     <font>
+                        <Font name="Russo One" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="42.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Editar" textFill="#3f382a">
+                     <font>
+                        <Font name="Russo One" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="42.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Reporte" textFill="#3f382a">
+                     <font>
+                        <Font name="Russo One" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="86.0" layoutY="366.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="210.0" layoutY="8.0" prefHeight="74.0" prefWidth="580.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="151.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="88.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="75.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="265.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="43.0" prefWidth="162.0" text="Código Administración" textFill="#3f382a">
+               <font>
+                  <Font name="Russo One" size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="43.0" prefWidth="72.0" text="Dirección" textFill="#3f382a" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Russo One" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtCodigoAdministracion" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Russo One" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtDireccion" editable="false" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Russo One" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelefono" editable="false" prefHeight="29.0" prefWidth="161.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Russo One" size="15.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="29.0" prefWidth="72.0" text="Teléfono" textFill="#3f382a" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Russo One" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblAdministracion" layoutX="210.0" layoutY="94.0" onMouseClicked="#seleccionarElemento" prefHeight="298.0" prefWidth="580.0" stylesheets="@../resource/ObjectMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoAdministracion" prefWidth="138.0" text="Código Administración" />
+          <TableColumn fx:id="colDireccion" prefWidth="324.0" text="Dirección" />
+            <TableColumn fx:id="colTelefono" prefWidth="116.0" text="Teléfono" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
