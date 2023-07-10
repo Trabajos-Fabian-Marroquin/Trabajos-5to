@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="570cb7c1-089a-4526-b044-642799e5db3d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="0e18ca9f-884b-40ac-9e65-b99b4a219e82"/>
+				<imageExpression><![CDATA["C:\\Users\\Pedro Armas\\Documents\\NetBeansProjects\\KinalMallIN5AM\\src\\org\\pedroarmas\\images\\Marco.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="92" height="65" uuid="ed847140-ef12-474a-a465-6903d53e8d90"/>
+				<imageExpression><![CDATA["C:\\Users\\Pedro Armas\\Pictures\\Logos Kinal\\llama.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="141" y="29" width="138" height="26" uuid="4018736f-f5b5-47ab-83b0-2ad37f9f9e53"/>
+				<textElement>
+					<font fontName="Cambria" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="13" width="569" height="25" forecolor="#C1B18C" backcolor="#C1B18C" uuid="6260338b-e272-4a23-92b4-b7c960b48c11"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="160" y="16" width="138" height="20" forecolor="#FFFFFF" uuid="2045738b-12b4-4732-834c-1b8dd97ac5be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="16" width="138" height="20" forecolor="#FFFFFF" uuid="de9b27bb-e3c6-466f-8fc3-b0b03201b2f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="16" width="138" height="20" forecolor="#FFFFFF" uuid="f6e2d327-45b2-4bd8-b672-f9664f025191"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="138" height="20" uuid="a3a95382-b7c8-4dc6-9ff5-31c6243f9601"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="24" width="569" height="1" forecolor="#BBAC7E" uuid="bc1f81a4-e6a1-4265-be59-2e5fa8c59a4b"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="160" y="0" width="137" height="20" uuid="67f3b9b1-be43-49ea-ada0-3d72c60d8690"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="138" height="20" uuid="624ba6c3-3243-48e0-bb98-70089a6e5e23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement x="430" y="12" width="142" height="20" uuid="dc55336c-a3bb-484a-a127-3b72b09a2136"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Pedro Manuel Armas Chang]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
